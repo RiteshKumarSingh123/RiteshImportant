@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+  <tr>
+  <th>Id</th>
+  <th>Edit</th>
+  <th>Delete</th>
+    <th>Name</th>
+    <th>Sal</th>
+    <th>Address</th>
+  </tr>
+    <tr th:each="data : ${teacherList}">
+    <td th:text="${data.id}"></td>
+    <td><a th:href="@{/teacher/getDataById(id=${data.id})}">Edit</a></td>
+    <td><a th:href="@{/teacher/deleteById(id=${data.id})}">Delete</a></td>
+    <td th:text="${data.name}"></td>
+    <td th:text="${data.sal}"></td>
+    <td th:text="${data.address}"></td>
+  </tr>
+</table>
+
+</body>
+</html>

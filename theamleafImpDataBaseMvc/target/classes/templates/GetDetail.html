@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/teacher/save}" method="post" th:object="${teacher}">
+name <input type="text" th:field="*{name}">
+sal  <input type="text" th:field="*{sal}">
+address <input type="text" th:field="*{address}">
+         <input type="submit" value="data submited">
+</form>
+<a th:href="@{/teacher/getAllData}">click for List</a>
+</body>
+</html>
