@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/mycss.css}">
+<script type="text/javascript" th:src="@{/js/javascript.js}"></script>
+</head>
+<body>
+<h1>hello Data</h1>
+<h5 th:text="${id}"></h5>
+<h5 th:text="${name}"></h5>
+<h5 th:text="${address}"></h5>
+<a th:href="@{/data/getHero}">click here for next</a>
+</body>
+</html>
