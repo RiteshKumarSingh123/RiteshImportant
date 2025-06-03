@@ -1,0 +1,86 @@
+<p>station works!</p>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<div>
+   <!-- <span>Select Name Balasore Mandatory to see List</span>
+    <input  [(ngModel)] = "stationName"  name="stationName" placeholder="Enter your stationName"> -->
+  <label for="stationName">Choose a Districts:</label>
+  <select id="stationName" name="stationName" [(ngModel)]="stationName" >
+  <option value="Balasore">Balasore</option>
+  <option value="Bhadrak">Bhadrak</option>
+  <option value="Bhubaneswar">Bhubaneswar</option>
+  <option value="Jaleswar">Jaleswar</option>
+</select>
+
+    <span>Select Active 1 or 0 Mandatory to see List</span>
+    <input  [(ngModel)] = "active"  name="active" placeholder="Enter your active">
+    <button (click)="getAllListData(this.active, this.stationName)">Search</button>
+</div>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>edit</th>
+      <th>delete</th>
+      <th>stationName</th>
+      <th>stationPlatform</th>
+      <th>totalTrainHaults</th>
+      <th>numberOfExpress</th>
+      <th>numberOfSuperFast</th>
+      <th>numberOfLuxuryTrain</th>
+      <th>staionConnectingWith</th>
+      <th>active</th>
+    </tr>
+  </thead>
+    <tr *ngFor="let data of stationList">
+      <td (click)="getStationDataByIds(data.id)"><button>edit</button></td>
+      <td (click)="deleteStationById(data.id)"><button>delete</button></td>
+      <td>{{data.stationName}}</td>
+      <td>{{data.stationPlatform}}</td>
+      <td>{{data.totalTrainHaults}}</td>
+      <td>{{data.numberOfExpress}}</td>
+      <td>{{data.numberOfSuperFast}}</td>
+      <td>{{data.numberOfLuxuryTrain}}</td>
+      <td>{{data.staionConnectingWith}}</td>
+      <td>{{data.active}}</td>
+    </tr>
+</table>
+<br><br>
+<div>
+<form id="stationForm">
+        <!-- <label for="id">Station ID:</label>
+        <input type="number" id="id" name="id" value="0"><br><br> -->
+
+        <label for="stationName">Station Name:</label>
+        <input type="text" id="stationName" name="name" [(ngModel)]="name" ><br><br>
+
+        <label for="stationPlatform">Number of Platforms:</label>
+        <input type="number" id="stationPlatform" name="stationPlatform" [(ngModel)]="stationPlatform" ><br><br>
+
+        <label for="totalTrainHaults">Total Train Hauls:</label>
+        <input type="number" id="totalTrainHaults" name="totalTrainHaults" [(ngModel)]="totalTrainHaults" ><br><br>
+
+        <label for="numberOfExpress">Number of Express Trains:</label>
+        <input type="number" id="numberOfExpress" name="numberOfExpress" [(ngModel)]="numberOfExpress" ><br><br>
+
+        <label for="numberOfSuperFast">Number of Superfast Trains:</label>
+        <input type="number" id="numberOfSuperFast" name="numberOfSuperFast" [(ngModel)]="numberOfSuperFast" ><br><br>
+
+        <label for="numberOfLuxuryTrain">Number of Luxury Trains:</label>
+        <input type="number" id="numberOfLuxuryTrain" name="numberOfLuxuryTrain" [(ngModel)]="numberOfLuxuryTrain" ><br><br>
+
+        <label for="staionConnectingWith">Station Connecting With (comma-separated):</label>
+        <input type="text" id="staionConnectingWith" name="staionConnectingWith" [(ngModel)]="staionConnectingWith"><br><br>
+
+        <label for="active">Active</label>
+        <select [(ngModel)]="activeSet" name="activeSet">
+        <option value="1">Active</option>
+        <option value="0">Inactive</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit" (click)="validation()">
+    </form>
+</div>

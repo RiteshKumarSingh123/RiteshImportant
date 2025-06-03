@@ -1,0 +1,209 @@
+<p>practise2 works!</p>
+<h1>ritesh</h1>
+<div>
+<table border="1">
+    <tr>
+      <th>ShowRoomName</th>
+      <th>ShowRoomOwnerName</th>
+      <th>TotalEmployess</th>
+    </tr>
+    <tr *ngFor="let value of listOfShowRoom">
+      <td>{{value.showRoomName}}</td>
+      <td>{{value.showRoomOwnerName}}</td>
+      <td>{{value.totalEmployess}}</td>
+    </tr>
+  </table>
+
+  <h1>All Data</h1>
+  <table border="1">
+    <h3>Kawasaki List</h3>
+    <tr>
+      <th>CompanyFrom</th>
+      <th>ManagerName</th>
+      <th>BestModel</th>
+    </tr>
+    <tr *ngFor="let value of kawasakiListData">
+      <td>{{value.companyFrom}}</td>
+      <td>{{value.managerName}}</td>
+      <td>{{value.bestModel}}</td>
+    </tr>
+    <h3>Tvs List</h3>
+    <tr>
+      <th>CompanyFrom</th>
+      <th>ManagerName</th>
+      <th>BestModel</th>
+    </tr>
+    <tr *ngFor="let value of tvsListData">
+      <td>{{value.companyFrom}}</td>
+      <td>{{value.managerName}}</td>
+      <td>{{value.bestModel}}</td>
+    </tr>
+    <h3>Bajaj List</h3>
+    <tr>
+      <th>CompanyFrom</th>
+      <th>ManagerName</th>
+      <th>BestModel</th>
+    </tr>
+    <tr *ngFor="let value of bajajListData">
+      <td>{{value.companyFrom}}</td>
+      <td>{{value.managerName}}</td>
+      <td>{{value.bestModel}}</td>
+    </tr>
+    <h3>Yamaha List</h3>
+    <tr>
+      <th>CompanyFrom</th>
+      <th>ManagerName</th>
+      <th>BestModel</th>
+    </tr>
+    <tr *ngFor="let value of yamahaListData">
+      <td>{{value.companyFrom}}</td>
+      <td>{{value.managerName}}</td>
+      <td>{{value.bestModel}}</td>
+    </tr>
+    <h3>Hero List</h3>
+    <tr>
+      <th>CompanyFrom</th>
+      <th>ManagerName</th>
+      <th>BestModel</th>
+    </tr>
+    <tr *ngFor="let value of heroListData">
+      <td>{{value.companyFrom}}</td>
+      <td>{{value.managerName}}</td>
+      <td>{{value.bestModel}}</td>
+    </tr>
+    <h3>Honda List</h3>
+    <tr>
+      <th>CompanyFrom</th>
+      <th>ManagerName</th>
+      <th>BestModel</th>
+    </tr>
+    <tr *ngFor="let value of hondaListData">
+      <td>{{value.companyFrom}}</td>
+      <td>{{value.managerName}}</td>
+      <td>{{value.bestModel}}</td>
+    </tr>
+    <h3>ShowRoom List</h3>
+    <tr>
+      <th>ShowRoomName</th>
+      <th>ShowRoomOwnerName</th>
+      <th>TotalEmployess</th>
+    </tr>
+    <tr *ngFor="let value of showRoomListData">
+      <td>{{value.showRoomName}}</td>
+      <td>{{value.showRoomOwnerName}}</td>
+      <td>{{value.totalEmployess}}</td>
+    </tr>
+  </table>
+</div>
+
+
+<form>
+  <h1>ShowRoom</h1>
+  <div>
+    <label>showRoomName:</label>
+    <input type="text"  name="showRoomName" [(ngModel)]="showRoomName">
+  </div>
+
+  <div>
+    <label>showRoomOwnerName:</label>
+    <input type="text"  name="showRoomOwnerName" [(ngModel)]="showRoomOwnerName">
+  </div>
+
+  <div>
+    <label>totalEmployess:</label>
+    <input type="text"  name="totalEmployess" [(ngModel)]="totalEmployess">
+  </div>
+  <h1>Hero</h1>
+  <div>
+    <label>companyFrom:</label>
+    <input type="text"  name="hCompanyFrom" [(ngModel)]="hCompanyFrom">
+  </div>
+
+  <div>
+      <label>managerName:</label>
+      <input type="text"  name="hManagerName" [(ngModel)]="hManagerName">
+    </div>
+  
+    <div>
+      <label>rtoNumber:</label>
+      <input type="text"  name="hBestModel" [(ngModel)]="hBestModel">
+    </div>
+    <h1>Bajaj</h1>
+    <div>
+      <label>companyFrom:</label>
+      <input type="text"  name="bCompanyFrom" [(ngModel)]="bCompanyFrom">
+    </div>
+  
+    <div>
+        <label>managerName:</label>
+        <input type="text"  name="bManagerName" [(ngModel)]="bManagerName">
+      </div>
+    
+      <div>
+        <label>rtoNumber:</label>
+        <input type="text"  name="bBestModel" [(ngModel)]="bBestModel">
+      </div>
+      <h1>Honda</h1>
+      <div>
+        <label>companyFrom:</label>
+        <input type="text"  name="hOcompanyFrom" [(ngModel)]="hOcompanyFrom">
+      </div>
+    
+      <div>
+          <label>managerName:</label>
+          <input type="text"  name="hOmanagerName" [(ngModel)]="hOmanagerName">
+        </div>
+      
+        <div>
+          <label>rtoNumber:</label>
+          <input type="text"  name="hObestModel" [(ngModel)]="hObestModel">
+        </div>
+        <h1>Kawasaki</h1>
+        <div>
+          <label>companyFrom:</label>
+          <input type="text"  name="kCompanyFrom" [(ngModel)]="kCompanyFrom">
+        </div>
+      
+        <div>
+            <label>managerName:</label>
+            <input type="text"  name="kManagerName" [(ngModel)]="kManagerName">
+          </div>
+        
+          <div>
+            <label>rtoNumber:</label>
+            <input type="text"  name="kBestModel" [(ngModel)]="kBestModel">
+          </div>
+          <h1>Tvs</h1>
+          <div>
+            <label>companyFrom:</label>
+            <input type="text"  name="tCompanyFrom" [(ngModel)]="tCompanyFrom">
+          </div>
+        
+          <div>
+              <label>managerName:</label>
+              <input type="text"  name="tManagerName" [(ngModel)]="tManagerName">
+            </div>
+          
+            <div>
+              <label>rtoNumber:</label>
+              <input type="text"  name="tBestModel" [(ngModel)]="tBestModel">
+            </div>
+            <h1>Yamaha</h1>
+            <div>
+              <label>companyFrom:</label>
+              <input type="text"  name="yCompanyFrom" [(ngModel)]="yCompanyFrom">
+            </div>
+          
+            <div>
+                <label>managerName:</label>
+                <input type="text"  name="yManagerName" [(ngModel)]="yManagerName">
+              </div>
+            
+              <div>
+                <label>rtoNumber:</label>
+                <input type="text"  name="yBestModel" [(ngModel)]="yBestModel">
+              </div>
+
+
+    <button (click)="saveAllData()">Save All Data</button>
+</form>

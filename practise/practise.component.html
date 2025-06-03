@@ -1,0 +1,96 @@
+<p>practise works!</p>
+<h1>Riteshwa</h1>
+
+<!-- <table border="1">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>products</th>
+        <th>employeeName</th>
+        <th>companyAddress</th>
+        <th>ownerName</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let value of listOfHitachi">
+        <td>{{value.id}}</td>
+        <td>{{value.products}}</td>
+        <td>{{value.employeeName}}</td>
+        <td>{{value.companyAddress}}</td>
+        <td>{{value.ownerName}}</td>
+      </tr>
+    </tbody>
+  </table>
+   -->
+<h1>Gadi Bala Ayya Ghar Se Kachra Nikal</h1>
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>address</th>
+        <th>price</th>
+        <th>companyName</th>
+        <th>rtoNumber</th>
+        <th>showRoomName</th>
+        <th>showRoom</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listOfBike">
+        <td><button (click)="getBikeById(data.id)">{{data.id}}</button><button><td (click)="deleteById(data.id)">delete</td></button></td>
+        <td>{{data.name}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.companyName}}</td>
+        <td>{{data.rtoNumber}}</td>
+        <td>{{data.showRoomName}}</td>
+        <td>{{data.showRoom}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <form>
+    <div>
+      <label>id:</label>
+      <input type="number"  name="iId" [(ngModel)]="bike.id">
+    </div>
+  
+    <div>
+      <label>address:</label>
+      <input type="text"  name="iAddress" [(ngModel)]="bike.address">
+    </div>
+  
+    <div>
+      <label>companyName:</label>
+      <input type="text"  name="iCompanyName" [(ngModel)]="bike.companyName">
+    </div>
+  
+    <div>
+      <label>name:</label>
+      <input type="text"  name="iName" [(ngModel)]="bike.name">
+    </div>
+
+    <div>
+        <label>price:</label>
+        <input type="text"  name="iPrice" [(ngModel)]="bike.price">
+      </div>
+    
+      <div>
+        <label>rtoNumber:</label>
+        <input type="text"  name="iRtoNumber" [(ngModel)]="bike.rtoNumber">
+      </div>
+    
+      <div>
+        <label>showRoomName:</label>
+        <input type="text"  name="iShowRoomName" [(ngModel)]="bike.showRoomName">
+      </div>
+
+
+  
+      <button (click)="saveBike()">Save Bike</button>
+  </form>
+  

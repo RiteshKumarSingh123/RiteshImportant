@@ -1,0 +1,299 @@
+<p>micro works!</p>
+<h1>Ritesh Here</h1>
+
+
+<table border="1">
+    <h3>Department</h3>
+    <tr> <!-- Table Row -->
+      <th>Id</th> <!-- Table Header Cell -->
+      <th>Name</th>
+      <th>Department</th> <!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of listOfMicros"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.id)">{{data.id}}</button><button (click)="deletById(data.id)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.departmentName}}</td> 
+      <td>{{data.department}}</td><!-- Table Data Cell -->
+    </tr>
+    <h3>Kawasaki</h3>
+    <tr> <!-- Table Row -->
+      <th>companyId</th> <!-- Table Header Cell -->
+      <th>companyFrom</th>
+      <th>managerName</th> 
+      <th>bestModel</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of kawasakiListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.companyId)">{{data.companyId}}</button><button (click)="deletById(data.companyId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.companyFrom}}</td> 
+      <td>{{data.managerName}}</td><!-- Table Data Cell -->
+      <td>{{data.bestModel}}</td>
+    </tr>
+    <h3>Tvs</h3>
+    <tr> <!-- Table Row -->
+      <th>companyId</th> <!-- Table Header Cell -->
+      <th>companyFrom</th>
+      <th>managerName</th> 
+      <th>bestModel</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of tvsListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.companyId)">{{data.companyId}}</button><button (click)="deletById(data.companyId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.companyFrom}}</td> 
+      <td>{{data.managerName}}</td><!-- Table Data Cell -->
+      <td>{{data.bestModel}}</td>
+    </tr>
+    <h3>Bajaj</h3>
+    <tr> <!-- Table Row -->
+      <th>companyId</th> <!-- Table Header Cell -->
+      <th>companyFrom</th>
+      <th>managerName</th> 
+      <th>bestModel</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of bajajListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.companyId)">{{data.companyId}}</button><button (click)="deletById(data.companyId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.companyFrom}}</td> 
+      <td>{{data.managerName}}</td><!-- Table Data Cell -->
+      <td>{{data.bestModel}}</td>
+    </tr>
+    <h3>Yamaha</h3>
+    <tr> <!-- Table Row -->
+      <th>companyId</th> <!-- Table Header Cell -->
+      <th>companyFrom</th>
+      <th>managerName</th> 
+      <th>bestModel</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of yamahaListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.companyId)">{{data.companyId}}</button><button (click)="deletById(data.companyId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.companyFrom}}</td> 
+      <td>{{data.managerName}}</td><!-- Table Data Cell -->
+      <td>{{data.bestModel}}</td>
+    </tr>
+    <h3>Hero</h3>
+    <tr> <!-- Table Row -->
+      <th>companyId</th> <!-- Table Header Cell -->
+      <th>companyFrom</th>
+      <th>managerName</th> 
+      <th>bestModel</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of heroListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.companyId)">{{data.companyId}}</button><button (click)="deletById(data.companyId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.companyFrom}}</td> 
+      <td>{{data.managerName}}</td><!-- Table Data Cell -->
+      <td>{{data.bestModel}}</td>
+    </tr>
+    <h3>Honda</h3>
+    <tr> <!-- Table Row -->
+      <th>companyId</th> <!-- Table Header Cell -->
+      <th>companyFrom</th>
+      <th>managerName</th> 
+      <th>bestModel</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of hondaListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.companyId)">{{data.companyId}}</button><button (click)="deletById(data.companyId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.companyFrom}}</td> 
+      <td>{{data.managerName}}</td><!-- Table Data Cell -->
+      <td>{{data.bestModel}}</td>
+    </tr>
+    <h3>ShowRoom</h3>
+    <tr> <!-- Table Row -->
+      <th>showRoomId</th> <!-- Table Header Cell -->
+      <th>showRoomName</th>
+      <th>showRoomOwnerName</th> 
+      <th>totalEmployess</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of showRoomListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.showRoomId)">{{data.showRoomId}}</button><button (click)="deletById(data.showRoomId)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.showRoomName}}</td> 
+      <td>{{data.showRoomOwnerName}}</td><!-- Table Data Cell -->
+      <td>{{data.totalEmployess}}</td>
+    </tr>
+
+    <h3>Employee</h3>
+    <tr> <!-- Table Row -->
+      <th>id</th> <!-- Table Header Cell -->
+      <th>name</th>
+      <th>address</th> 
+      <th>salary</th><!-- Table Header Cell -->
+    </tr>
+    <tr *ngFor="let data of employeeListData"> <!-- Table Row -->
+      <td><button (click)="getMicroById(data.id)">{{data.id}}</button><button (click)="deletById(data.id)">delete</button></td> <!-- Table Data Cell -->
+      <td>{{data.name}}</td> 
+      <td>{{data.address}}</td><!-- Table Data Cell -->
+      <td>{{data.salary}}</td>
+    </tr>
+
+</table>
+
+<div>
+  <h3>TeacherList</h3>
+  <table border="1">
+    <tr>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th>TeacherId</th>
+      <th>TeacherName</th>
+      <th>TeacherSal</th>
+      <th>TeacherAddress</th>
+    </tr>
+    <tr *ngFor="let data of teacherList">
+      <td><button (click)="getTeachersById(data.id)">{{data.id}}</button></td>
+      <td><button (click)="deleteTeachersById(data.id)">delete</button></td>
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.sal}}</td>
+      <td>{{data.address}}</td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required [(ngModel)]="teach.name"><br><br>
+  
+    <label for="sal">Sal:</label>
+    <input type="text" id="sal" name="sal" required [(ngModel)]="teach.sal"><br><br>
+  
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" cols="50" required [(ngModel)]="teach.address"></textarea><br><br>
+  
+    <button type="submit" (click)="saveTeachersData()">Submit Teacher</button>
+    <button type="submit" (click)="updateTeacherData()">update Teacher</button>
+  </form>
+</div>
+  
+<form>
+  <h1>ShowRoom</h1>
+  <div>
+    <label>showRoomName:</label>
+    <input type="text"  name="showRoomName" [(ngModel)]="showRoomObj.showRoomName">
+  </div>
+
+  <div>
+    <label>showRoomOwnerName:</label>
+    <input type="text"  name="showRoomOwnerName" [(ngModel)]="showRoomObj.showRoomOwnerName">
+  </div>
+
+  <div>
+    <label>totalEmployess:</label>
+    <input type="text"  name="totalEmployess" [(ngModel)]="showRoomObj.totalEmployess">
+  </div>
+  <h1>Hero</h1>
+  <div>
+    <label>companyFrom:</label>
+    <input type="text"  name="hCompanyFrom" [(ngModel)]="heroObj.companyFrom">
+  </div>
+
+  <div>
+      <label>managerName:</label>
+      <input type="text"  name="hManagerName" [(ngModel)]="heroObj.managerName">
+    </div>
+  
+    <div>
+      <label>rtoNumber:</label>
+      <input type="text"  name="hBestModel" [(ngModel)]="heroObj.bestModel">
+    </div>
+    <h1>Bajaj</h1>
+    <div>
+      <label>companyFrom:</label>
+      <input type="text"  name="bCompanyFrom" [(ngModel)]="bajajObj.companyFrom">
+    </div>
+  
+    <div>
+        <label>managerName:</label>
+        <input type="text"  name="bManagerName" [(ngModel)]="bajajObj.managerName">
+      </div>
+    
+      <div>
+        <label>rtoNumber:</label>
+        <input type="text"  name="bBestModel" [(ngModel)]="bajajObj.bestModel">
+      </div>
+      <h1>Honda</h1>
+      <div>
+        <label>companyFrom:</label>
+        <input type="text"  name="hOcompanyFrom" [(ngModel)]="hondaObj.companyFrom">
+      </div>
+    
+      <div>
+          <label>managerName:</label>
+          <input type="text"  name="hOmanagerName" [(ngModel)]="hondaObj.managerName">
+        </div>
+      
+        <div>
+          <label>rtoNumber:</label>
+          <input type="text"  name="hObestModel" [(ngModel)]="hondaObj.bestModel">
+        </div>
+        <h1>Kawasaki</h1>
+        <div>
+          <label>companyFrom:</label>
+          <input type="text"  name="kCompanyFrom" [(ngModel)]="kawasakiObj.companyFrom">
+        </div>
+      
+        <div>
+            <label>managerName:</label>
+            <input type="text"  name="kManagerName" [(ngModel)]="kawasakiObj.managerName">
+          </div>
+        
+          <div>
+            <label>rtoNumber:</label>
+            <input type="text"  name="kBestModel" [(ngModel)]="kawasakiObj.bestModel">
+          </div>
+          <h1>Tvs</h1>
+          <div>
+            <label>companyFrom:</label>
+            <input type="text"  name="tCompanyFrom" [(ngModel)]="tvsObj.companyFrom">
+          </div>
+        
+          <div>
+              <label>managerName:</label>
+              <input type="text"  name="tManagerName" [(ngModel)]="tvsObj.managerName">
+            </div>
+          
+            <div>
+              <label>rtoNumber:</label>
+              <input type="text"  name="tBestModel" [(ngModel)]="tvsObj.bestModel">
+            </div>
+            <h1>Yamaha</h1>
+            <div>
+              <label>companyFrom:</label>
+              <input type="text"  name="yCompanyFrom" [(ngModel)]="yamahaObj.companyFrom">
+            </div>
+          
+            <div>
+                <label>managerName:</label>
+                <input type="text"  name="yManagerName" [(ngModel)]="yamahaObj.managerName">
+              </div>
+            
+              <div>
+                <label>rtoNumber:</label>
+                <input type="text"  name="yBestModel" [(ngModel)]="yamahaObj.bestModel">
+              </div>
+
+              <h1>Department</h1>
+              <div>
+                <label>Name:</label>
+                <input type="text"  name="departmentName" [(ngModel)]="departmentObj.departmentName">
+              </div>
+            
+              <div>
+                  <label>Department Name:</label>
+                  <input type="text"  name="department" [(ngModel)]="departmentObj.department">
+                </div>
+              <h1>Employee</h1>
+                <div>
+                  <label>Employee Name:</label>
+                  <input type="text"  name="name" [(ngModel)]="employeeObj.name">
+                </div>
+
+                <div>
+                  <label>Employee Address:</label>
+                  <input type="text"  name="address" [(ngModel)]="employeeObj.address">
+                </div>
+
+                <div>
+                  <label>Employee Salary:</label>
+                  <input type="text"  name="salary" [(ngModel)]="employeeObj.salary">
+                </div>
+
+                <button (click)="updateShowData()">update ShowRoom ANd Bikes</button>
+                <button (click)="updateMicroService()">Update Employee Department</button>
+    <button (click)="SaveMicroService()">Save All Data</button>
+</form>
