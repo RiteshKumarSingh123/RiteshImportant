@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> hello </h1>
+<form th:action="@{/prac/savePractise}" method="post" th:object="${practise}">
+Name <input type="text" th:field="*{name}">
+CompanyName <input type="text" th:field="*{companyName}">
+Address <input type="text" th:field="*{address}">
+homeTownAddress <input type="text" th:field="*{homeTownAddress}">
+<input type="submit" value="dateSaved">
+</form>
+
+<button><a th:href="@{/prac/getList}">click to see only List</a></button><br>
+
+<button><a th:href="@{/prac/getPractiseList}">Click too see two ProjectsList</a></button><br>
+
+<form th:action="@{/prac/saveMicro}" method="post" th:object="${teacher}">
+TeacherName <input type="text" th:field="*{name}">
+TeacherSal <input type="text" th:field="*{sal}">
+TeacherAddress <input type="text" th:field="*{address}">
+Name <input type="text" th:field="*{practise.name}">
+CompanyName <input type="text" th:field="*{practise.companyName}">
+Address <input type="text" th:field="*{practise.address}">
+homeTownAddress <input type="text" th:field="*{practise.homeTownAddress}">
+<input type="submit" value="saveMicro">
+</form>
+</body>
+</html>

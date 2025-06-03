@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border=1>
+  <thead>
+  <h3>PractiseList</h3>
+    <tr>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>CompanyName</th>
+      <th>Address</th>
+      <th>HomeTownAddress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="data : ${practiseList}">
+      <td><a th:href="@{/prac/getMicroById(id=${data.id})}">edit</a></td>
+      <td><a th:href="@{/prac/deleteMicroById(id=${data.id})}">delete</a></td>
+      <td th:text="${data.id}"></td>
+      <td th:text="${data.name}"></td>
+      <td th:text="${data.companyName}"></td>
+      <td th:text="${data.address}"></td>
+      <td th:text="${data.homeTownAddress}"></td>
+    </tr>
+  </tbody>
+   </tbody>
+</table>
+<table border=1>
+   <thead>
+   <h3>TeachersList</h3>
+    <tr>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Sal</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="value : ${teachersList}">
+      <td><a th:href="@{/prac/getMicroById(id=${value.id})}">edit</a></td>
+      <td><a th:href="@{/prac/deleteMicroById(id=${value.id})}">delete</a></td>
+      <td th:text="${value.id}"></td>
+      <td th:text="${value.name}"></td>
+      <td th:text="${value.sal}"></td>
+      <td th:text="${value.address}"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>

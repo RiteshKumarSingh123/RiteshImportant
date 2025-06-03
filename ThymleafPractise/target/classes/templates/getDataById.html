@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/prac/updatePractise}" method="post" th:object="${practise}">
+id : <input type="text" th:field="*{id}">
+name : <input type="text" th:field="*{name}">
+companyName : <input type="text" th:field="*{companyName}">
+address : <input type="text" th:field="*{address}">
+homeTownAddress : <input type="text" th:field="*{homeTownAddress}">
+<input type="submit" value="submited">
+</form>
+<br>
+<form th:action="@{/prac/updateMicro}" method="post" th:object="${teacher}">
+id : <input type="text" th:field="*{id}">
+name : <input type="text" th:field="*{name}">
+sal : <input type="text" th:field="*{sal}">
+address : <input type="text" th:field="*{address}">
+<input type="submit" value="updateMicro">
+</form>
+</body>
+</html>
