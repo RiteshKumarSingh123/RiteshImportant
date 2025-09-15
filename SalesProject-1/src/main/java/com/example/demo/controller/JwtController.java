@@ -77,7 +77,7 @@ public class JwtController {
 	    }
 
 	    @GetMapping("/validate")
-	    public Map<String, Object> validateToken(@RequestHeader("Authorization") String authHeader,@RequestBody AuthRequest authRequest) {
+	    public Map<String, Object> validateToken(@RequestHeader("Authorization") String authHeader) {
 	        String token = authHeader.substring(7);
 	        boolean valid = jwtUtil.validateToken(token) && jwtUtil.isTokenValid(token);
             System.out.println(valid+"valid");
