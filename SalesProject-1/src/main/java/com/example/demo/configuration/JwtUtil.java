@@ -78,19 +78,22 @@ public class JwtUtil {
 	    }
 	    
 	 
-	    
 	    public boolean validateToken(String token) {
 	        try {
-	            Jwts.parserBuilder()
-	                    .setSigningKey(getSigningKey())
-	                    .build()
-	                    .parseClaimsJws(token);
-	            return true;
+	            Claims claims = getClaims(token);
+	            String username = claims.getSubject();
+
+	            if (claims.getExpiration().before(new Date())) {
+	                return false;
+	            }
+
+	            String cachedToken = redisTemplate.opsForValue().get("user:" + username);
+	            return cachedToken != null && cachedToken.equals(token);
+
 	        } catch (JwtException | IllegalArgumentException e) {
-	            return false; 
+	            return false;
 	        }
 	    }
-
 	    
 	 
 	    public Claims getClaims(String token) {

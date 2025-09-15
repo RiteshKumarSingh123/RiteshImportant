@@ -102,6 +102,7 @@ public class MultiTenantConnectionProviderImpl implements MultiTenantConnectionP
         try {
             DataSource ds = createDataSource(env, prefix);
             dataSources.put(tenantId, ds);
+            System.out.println(">>> DataSource registered for tenant: " + tenantId);
         } catch (IllegalArgumentException e) {
             throw new RuntimeException("Failed to create datasource for tenant '" + tenantId + "': " + e.getMessage(), e);
         }
@@ -155,6 +156,7 @@ public class MultiTenantConnectionProviderImpl implements MultiTenantConnectionP
 
     @Override
     public Connection getConnection(Object tenantIdentifier) throws SQLException {
+    	 System.out.println(">>> Trying to get connection for tenant: " + tenantIdentifier);
         DataSource dataSource = dataSources.get(String.valueOf(tenantIdentifier));
         if (dataSource != null) {
             return dataSource.getConnection();
@@ -162,6 +164,18 @@ public class MultiTenantConnectionProviderImpl implements MultiTenantConnectionP
             throw new SQLException("No DataSource found for tenant: " + tenantIdentifier);
         }
     }
+//    @Override
+//    public Connection getConnection(Object tenantIdentifier) throws SQLException {
+//        System.out.println(">>> Trying to get connection for tenant: " + tenantIdentifier);
+//        DataSource dataSource = dataSources.get(String.valueOf(tenantIdentifier));
+//        if (dataSource != null) {
+//            Connection conn = dataSource.getConnection();
+//            System.out.println(">>> SUCCESS: Got connection for tenant " + tenantIdentifier);
+//            return conn;
+//        } else {
+//            throw new SQLException("No DataSource found for tenant: " + tenantIdentifier);
+//        }
+//    }
 
     @Override
     public void releaseConnection(Object tenantIdentifier, Connection connection) throws SQLException {

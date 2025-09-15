@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.configuration.JwtUtil;
 import com.example.demo.model.AuthRequest;
+import com.example.demo.model.Users;
 import com.example.demo.service.JwtService;
 
 import io.jsonwebtoken.Claims;
@@ -76,7 +77,7 @@ public class JwtController {
 	    }
 
 	    @GetMapping("/validate")
-	    public Map<String, Object> validateToken(@RequestHeader("Authorization") String authHeader) {
+	    public Map<String, Object> validateToken(@RequestHeader("Authorization") String authHeader,@RequestBody AuthRequest authRequest) {
 	        String token = authHeader.substring(7);
 	        boolean valid = jwtUtil.validateToken(token) && jwtUtil.isTokenValid(token);
             System.out.println(valid+"valid");
@@ -84,5 +85,8 @@ public class JwtController {
 	        response.put("valid", valid);
 	        return response;
 	    }
+	    
+	    
+
 	
 }
