@@ -23,7 +23,7 @@ public class HibernateConfig {
             CurrentTenantIdentifierResolverImpl tenantResolver) {
 
         Map<String, Object> props = new HashMap<>();
-        props.put("hibernate.multiTenancy", MultiTenancyStrategy.SCHEMA);
+        props.put("hibernate.multiTenancy", MultiTenancyStrategy.DATABASE);
         props.put(Environment.MULTI_TENANT_CONNECTION_PROVIDER, multiTenantConnectionProvider);
         props.put(Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, tenantResolver);
         props.put(Environment.DIALECT, "org.hibernate.dialect.OracleDialect");
